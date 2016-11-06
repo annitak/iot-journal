@@ -6,7 +6,7 @@ Google Cloud SDK Setup
    $ tar xzvf google-cloud-sdk-133.0.0-linux-x86_64.tar.gz
 2. Add Cloud SDK Tools to Path
    $ ./google-cloud-sdk/install.sh
-   * When prompted, set the rc file to: /etc/profile *
+   * When prompted, set the rc file to: /etc/profile
 3. Initialize and Login
    $ gcloud init
 
