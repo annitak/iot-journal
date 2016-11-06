@@ -24,3 +24,14 @@ REST API Speech Recognition Tutorial: https://cloud.google.com/speech/docs/rest-
 5. Run
   * $ export GCLOUD_PROJECT=your-project-id
   * $ python transcribe.py audio.raw
+
+
+Recording Audio from Microphone
+-------------------------------
+1. Follow hardware and software set up instructions from "Audio Interface.pdf"
+2. To record: $ arecord -f S16_LE -r44100 test.raw
+3. To playback: $ aplay test.raw
+4. To upload to GCloud and transcribe audio: $ python transcribe.py test.raw
+
+
+TO DO: Extract returned text from GCloud Speech Recognition. Analyze for sentiment and mental health measures.
