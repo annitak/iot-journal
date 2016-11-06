@@ -19,11 +19,12 @@ REST API Speech Recognition Tutorial: https://cloud.google.com/speech/docs/rest-
 ------------------------------------
 1. Download transcribe.py, sync-request.json, and audio.raw
 2. Follow steps for authenticating: https://cloud.google.com/speech/docs/common/auth#authenticating_with_application_default_credentials
-  * $ export GOOGLE_APPLICATION_CREDENTIALS=<path_to_service_account_file>
-  * $ gcloud auth activate-service-account --key-file=service-account-file
+  * $ export GOOGLE_APPLICATION_CREDENTIALS=<service-account-file.json>
+  * $ gcloud auth activate-service-account --key-file=<service-account-file.json>
+3. Set up Access Token
   * $ gcloud auth print-access-token
-3. Copy and paste access_token into curl_request_access_token.sh
-4. chmod +x curl_request_access_token.sh
+  * Copy and paste access_token into curl_request_access_token.sh
+  * $ chmod +x curl_request_access_token.sh
   * $ ./curl_request_access_token.sh
 5. Run
   * $ export GCLOUD_PROJECT=your-project-id
