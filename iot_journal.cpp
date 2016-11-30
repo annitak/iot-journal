@@ -44,8 +44,9 @@ int main()
         }
         else
         {
-            cout << readTime(time()) << endl;
-            sleep(60);
+            if (time() % 5 == 0)
+                cout << readTime(time()) << endl;
+            sleep(1);
         }
     }
 }
@@ -76,61 +77,61 @@ void questions()
     response = listenForResponse();
     storeResponse(response, q1);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q2;
     response = listenForResponse();
     storeResponse(response, q2);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q3;
     response = listenForResponse();
     storeResponse(response, q3);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q4;
     response = listenForResponse();
     storeResponse(response, q4);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q5;
     response = listenForResponse();
     storeResponse(response, q5);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q6;
     response = listenForResponse();
     storeResponse(response, q6);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q7;
     response = listenForResponse();
     storeResponse(response, q7);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q8;
     response = listenForResponse();
     storeResponse(response, q8);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q9;
     response = listenForResponse();
     storeResponse(response, q9);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     cout << q10;
     response = listenForResponse();
     storeResponse(response, q10);
     total += response;
-    usleep(300000);
+    usleep(700000);
     
     int score = (int)((total * 100) / 40);
     
@@ -197,7 +198,7 @@ void alarm()
     mraa_gpio_dir(buzzer, MRAA_GPIO_OUT);
     
     mraa_gpio_write(buzzer, 1);
-    sleep(1);
+    usleep(500000);
     mraa_gpio_write(buzzer, 0);
     sleep(1);
 }
@@ -246,7 +247,7 @@ bool isJournalPeriod()
     int alarm = timeAlarm();
     
     int timeSince = timeNow - alarm;
-    int timePeriod = 60;        // 24 hours is 86400
+    int timePeriod = 15;        // 24 hours is 86400
     
     int timeSinceEpoch = timeSince%timePeriod;
     if (timeSinceEpoch == 0)
