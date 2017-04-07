@@ -1,9 +1,21 @@
-IOT-Journal is created as a part of the UCLA Fall 2016 Engineering 96C class on IOT (Internet of Things). The project is intended for the UCLA Depression Grand Challenges and aims to provide more data to people with depression as well as mental health professionals. By creating a journaling device, we hope to help patients and mental health professionals monitor symptoms of depression. IOT-Journal uses machine learning to recognize symptoms of depression and track changes in symptoms over time. Patients can easily communicate with the device by speaking to it and answering prompts. Mental health professionals and patients can then download the data easily and quickly either from the device or through a secure cloud platform.
+IOT-Journal is created as a part of the UCLA Fall 2016 Engineering 96C class on IOT (Internet of Things). The project is intended for the UCLA Depression Grand Challenges and aims to provide more data to people with depression as well as mental health professionals. By creating a journaling device, we hope to help patients and mental health professionals monitor symptoms of depression. The ultimate goal of IOT-Journal is to use machine learning to recognize symptoms of depression and track changes in symptoms over time. Patients can easily communicate with the device by speaking to it and answering prompts. Mental health professionals and patients can then download the data easily and quickly either from the device or through a secure cloud platform.
 
-Getting Started on Linux: https://cloud.google.com/sdk/docs/quickstart-linux
+Parts Needed
+------------
+1. Intel Edison Board with compatible Arduino Breakout Board
+2. USB headset with microphone
+3. Grove- Starter Kit v3
+
+OS & Requirements
+-----------------
+1. Install Yocto Embedded Linux OS on the Intel Edison Board prior to beginning this project.
+2. Install Python 2.7 or the latest version of Python required by Google Cloud as found in the link below.
+3. Connect the parts shown in the Hardware Diagram image file.
 
 Google Cloud SDK Setup
 ----------------------
+Getting Started on Linux Guide: https://cloud.google.com/sdk/docs/quickstart-linux
+
 1. Extract Google Cloud SDK
    * $ tar xzvf google-cloud-sdk-133.0.0-linux-x86_64.tar.gz
 2. Add Cloud SDK Tools to Path
@@ -39,4 +51,11 @@ Recording Audio from Microphone
 4. To upload to GCloud and transcribe audio: $ python transcribe.py test.raw
 
 
-TO DO: Extract returned text from GCloud Speech Recognition. Analyze for sentiment and mental health measures.
+Using JSON from GCloud Speech Recognition
+-----------------------------------------
+1. Make sure you are in the same directory as your "recording.json" file.
+2. Download process_recording.py.
+
+
+
+TO DO: Analyze for sentiment and mental health measures.
