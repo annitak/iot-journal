@@ -29,19 +29,16 @@ Getting Started on Linux Guide: https://cloud.google.com/sdk/docs/quickstart-lin
    
 REST API Speech Recognition Tutorial: https://cloud.google.com/speech/docs/rest-tutorial#make_a_non-streaming_rest_api_recognize_request
 ------------------------------------
-1. Download transcribe.py, sync-request.json, and audio.raw
+1. Download transcribe.py, sync-request.json, and recorder.py
 2. Follow steps for authenticating: https://cloud.google.com/speech/docs/common/auth#authenticating_with_application_default_credentials
-  * $ export GOOGLE_APPLICATION_CREDENTIALS=<service-account-file.json>
-  * $ gcloud auth activate-service-account --key-file=<service-account-file.json>
-3. Set up Access Token
-  * $ gcloud auth print-access-token
-  * Copy and paste access_token into curl_request_access_token.sh
+  * $ export GCLOUD_PROJECT=your-project-id
+3. Run curl_request_access_token.sh. NOTE: Previous versions required you to get the $ACCESSTOKEN first. This is now automated by this script.
   * $ chmod +x curl_request_access_token.sh
   * $ ./curl_request_access_token.sh
-5. Run
-  * $ export GCLOUD_PROJECT=your-project-id
-  * $ python transcribe.py audio.raw
+  
 
+NOTE: All steps below this line are instructions for playing with the audio settings. You might need this to optimize for your microphone setup
+------------------------------------------------------------------------------------
 
 Recording Audio from Microphone
 -------------------------------
@@ -55,7 +52,7 @@ Using JSON from GCloud Speech Recognition
 -----------------------------------------
 1. Make sure you are in the same directory as your "recording.json" file.
 2. Download process_recording.py.
-
+  * $ python process_recording.py
 
 
 TO DO: Analyze for sentiment and mental health measures.
